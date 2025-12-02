@@ -1,0 +1,32 @@
+{"timestamp":"2025-11-18T23:24:59.417181Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-18T23:24:59.418047Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/energy_etl_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-18T23:24:59.449827Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/energy_etl_dag.py","lineno":8,"logger":"py.warnings"}
+{"timestamp":"2025-11-18T23:24:59.466107Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.466443Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.466748Z","level":"info","event":"Current task name:clean_transform","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.467005Z","level":"info","event":"Dag name:energy_data_etl_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.481175Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.481585Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.481851Z","level":"info","event":"Cleaning: co2_emissions","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.482060Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.660090Z","level":"info","event":"✓ Cleaned co2_emissions: 29384 rows (removed 0)","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.660493Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.660739Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.660937Z","level":"info","event":"Cleaning: electricity_production","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.661129Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.692682Z","level":"info","event":"✓ Cleaned electricity_production: 6917 rows (removed 0)","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.693102Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.693395Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.693671Z","level":"info","event":"Cleaning: oil_production","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.694032Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.701078Z","level":"info","event":"✓ Cleaned oil_production: 750 rows (removed 0)","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.701450Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.701692Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.701919Z","level":"info","event":"Cleaning: energy_prod_cons","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.702151Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.712405Z","level":"info","event":"✓ Cleaned energy_prod_cons: 1113 rows (removed 0)","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.734940Z","level":"info","event":"Done. Returned value was: Cleaned 4 datasets","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-11-18T23:24:59.735253Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019a9949-1bae-7d00-b8a6-ee5f86eeb7e7'), task_id='clean_transform', dag_id='energy_data_etl_pipeline', run_id='manual__2025-11-18T23:24:55.625488+00:00_53aIaNEV', try_number=1, dag_version_id=UUID('019a9948-8d0c-702d-860f-747d3824b634'), map_index=-1, hostname='f2abada7ff7c', context_carrier={}, task=<Task(PythonOperator): clean_transform>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2025, 11, 18, 23, 24, 58, 960434, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1352}
+{"timestamp":"2025-11-18T23:24:59.761974Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.762316Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-11-18T23:24:59.762729Z","level":"info","event":"Task operator:<Task(PythonOperator): clean_transform>","logger":"task.stdout"}
