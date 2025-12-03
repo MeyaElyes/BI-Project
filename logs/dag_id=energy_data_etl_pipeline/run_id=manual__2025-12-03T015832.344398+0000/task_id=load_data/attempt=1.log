@@ -1,0 +1,20 @@
+{"timestamp":"2025-12-03T01:58:36.805869Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-03T01:58:36.807950Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/energy_etl_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-03T01:58:36.904088Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/energy_etl_dag.py","lineno":8,"logger":"py.warnings"}
+{"timestamp":"2025-12-03T01:58:36.949993Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:36.950613Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:36.951087Z","level":"info","event":"Current task name:load_data","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:36.951477Z","level":"info","event":"Dag name:energy_data_etl_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.010041Z","level":"info","event":"✓ Loaded co2_emissions: 29384 rows, 4 columns","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.016977Z","level":"info","event":"✓ Metadata loaded for co2_emissions","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.034818Z","level":"info","event":"✓ Loaded electricity_production: 6917 rows, 12 columns","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.039239Z","level":"info","event":"✓ Metadata loaded for electricity_production","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.044686Z","level":"info","event":"✓ Loaded oil_production: 750 rows, 4 columns","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.050866Z","level":"info","event":"✓ Metadata loaded for oil_production","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.057380Z","level":"info","event":"✓ Loaded energy_prod_cons: 1113 rows, 5 columns","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.063681Z","level":"info","event":"✓ Metadata loaded for energy_prod_cons","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.321181Z","level":"info","event":"Done. Returned value was: Loaded 4 datasets","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-12-03T01:58:37.323539Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019ae1ee-c2ed-7c78-8305-05bbbc10d856'), task_id='load_data', dag_id='energy_data_etl_pipeline', run_id='manual__2025-12-03T01:58:32.344398+00:00', try_number=1, dag_version_id=UUID('019a9aca-b799-7da3-8010-67e03a11011b'), map_index=-1, hostname='79cd41a900cb', context_carrier={}, task=<Task(PythonOperator): load_data>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2025, 12, 3, 1, 58, 34, 676366, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1352}
+{"timestamp":"2025-12-03T01:58:37.387019Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.393269Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-03T01:58:37.393934Z","level":"info","event":"Task operator:<Task(PythonOperator): load_data>","logger":"task.stdout"}
