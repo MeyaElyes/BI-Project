@@ -36,6 +36,12 @@ dag = DAG(
 # Data directory - update this path to where your CSV files are located
 DATA_DIR = Path('/opt/airflow/dags/data')  # Update this path
 
+# ===== COUNTRY FILTER CONFIGURATION =====
+# Change this to filter data for a specific country
+# Set to None to load all countries
+TARGET_COUNTRY = 'Italy'  # Options: 'Italy', 'United States', 'China', etc. or None for all
+# ========================================
+
 
 def load_data_and_metadata(**context):
     """Load all CSV files and their corresponding JSON metadata"""
@@ -148,6 +154,11 @@ def clean_and_transform_data(**context):
             df['entity_type'] = df['entity'].apply(
                 lambda x: 'aggregate' if any(agg in str(x) for agg in aggregates) else 'country'
             )
+        
+        # Filter by TARGET_COUNTRY if specified
+        if TARGET_COUNTRY and 'entity' in df.columns:
+            df = df[df['entity'] == TARGET_COUNTRY]
+            print(f"  ✓ Filtered to {TARGET_COUNTRY} only: {len(df)} rows")
         
         # Save cleaned data to temp
         df.to_parquet(f'/tmp/{key}_cleaned.parquet', index=False)
